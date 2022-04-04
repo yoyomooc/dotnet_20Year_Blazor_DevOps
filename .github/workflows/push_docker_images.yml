@@ -56,7 +56,7 @@ jobs:
           # 从标签名称中去掉“v”前缀
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
           #使用Docker 'latest'标签的约定规则
-          [ "$VERSION" == "master" ] && VERSION=latest
+          [ "$VERSION" == "main" ] && VERSION=latest
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
           echo 重命名APP为镜像APP=$IMAGE_ID/${{env.IMAGE_NAME_APP}}:$VERSION
