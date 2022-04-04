@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29926.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoyoMooc.StuManagement.Models", "YoyoMooc.StuManagement.Models\YoyoMooc.StuManagement.Models.csproj", "{AB92BA18-B5F2-456E-ACD4-D63F81FC679E}"
 EndProject
@@ -12,13 +12,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{33F1155D-8DE2-4678-9382-51D7527FE74E}"
 	ProjectSection(SolutionItems) = preProject
 		build.md = build.md
-		docker-compose.yml = docker-compose.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{61679648-74C1-464F-8C36-9C0A941CF5E4}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.test.yml = docker-compose.test.yml
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{D904C137-33A8-452C-BF9D-695831197359}"

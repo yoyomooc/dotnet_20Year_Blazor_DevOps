@@ -36,6 +36,24 @@
 
 
 数据库：SqlServer 2019
+
+
+## 本地调试
+
+
+```docker
+
+docker build .  --file ./YoyoMooc.StuManagement.Api/Dockerfile dotnet_20Year_Blazorwebapi
+
+
+```
+
+
+```
+docker-compose -f 
+```
+
+
 ## 快速运行
 
 已经内置了docker-compose 脚本， 启动

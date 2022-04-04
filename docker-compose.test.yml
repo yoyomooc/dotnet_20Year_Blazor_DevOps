@@ -16,8 +16,10 @@ services:
 
     webapi:
         build:
-            context: ./YoyoMooc.StuManagement.Api
-            dockerfile: Dockerfile
+            context: .
+            dockerfile: YoyoMooc.StuManagement.Api/Dockerfile
+        ports:
+            - 3002:80
         environment:
             - WAITHOST=mssql
             - WAITPORT=1433
@@ -29,7 +31,9 @@ services:
     blazor:
         build:
             context: .
-            dockerfile: Dockerfile
+            dockerfile: YoyoMooc.StuManagement.Web/Dockerfile
+        ports:
+            - 3001:80
         environment:
             - WAITHOST=mssql
             - WAITPORT=1433
