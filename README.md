@@ -12,7 +12,7 @@
   
 网站Demo采用Blazor 开发完成,整个网站没有包含一行javascript和ts文件
 
-- Blazor 解决了 Angular、Vue、React 的SSO问题，
+- Blazor 解决了 Angular、Vue、React 的SEO问题，
 - Blazor解决了 前端项目编译Angular、Vue、React慢的问题，
 - 传统MVC、RazorPage在Ajax上需要通过js进行Dom操作的问题，被Blazor解决了双向绑定问题解决了，
 
