@@ -1,13 +1,14 @@
 
-<!-- ![.NET Core](https://github.com/yoyomooc/BlazorDemo/workflows/.NET%20Core/badge.svg) 
-![Docker Image CI](https://github.com/yoyomooc/BlazorDemo/workflows/Docker%20Image%20CI/badge.svg) -->
+<!-- ![.NET Core](https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps/workflows/.NET%20Core/badge.svg) 
+![Docker Image CI](https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps/workflows/Docker%20Image%20CI/badge.svg) -->
 
-# YoyoMooc.BlazorDemo
+# YoyoMooc.BlazorDemo 
 
-大家好，我使用Blazor 做了一个Demo，
+更多信息与课程欢迎访问： 
 
+- [https://www.52abp.com/](https://www.52abp.com/)
 
-
+- [https://www.yoyomooc.com/](https://www.yoyomooc.com/)
   
 网站Demo采用Blazor 开发完成,整个网站没有包含一行javascript和ts文件
 
@@ -24,7 +25,7 @@
 
 镜像仓库地址以下：
 
-- github：[https://github.com/yoyomooc/BlazorDemo](https://github.com/yoyomooc/BlazorDemo)
+- github：[https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps](https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps)
 - gitee:[https://gitee.com/yoyomooc/blazor-demo](https://gitee.com/yoyomooc/blazor-demo)
 
 
