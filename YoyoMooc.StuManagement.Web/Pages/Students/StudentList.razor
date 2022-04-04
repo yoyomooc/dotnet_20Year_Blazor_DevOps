@@ -1,0 +1,71 @@
+@page "/student"
+@inherits StudentListBase
+@using System.Runtime.InteropServices
+@using System
+@using System.IO
+@using System.Diagnostics
+
+
+
+<h5 class="text-dark">学生信息列表</h5>
+
+<h4>
+    <a href="/student/add">添加学生信息</a>
+
+    <a href="/student" @onclick="@AddBatchStudents">添加10个学生</a>
+</h4>
+
+
+@{
+    if (ToolTips == null)
+    {
+
+    }
+    else
+    {
+        <div class="alert alert-primary" role="alert">
+            @ToolTips
+        </div>
+    }
+}
+
+
+
+
+@if (Students == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="card-deck">
+        @foreach (var student in Students)
+        {
+            <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
+                <div class="card-header">
+                    <h3>@student.StudentName </h3>
+                </div>
+
+
+                <img class="card-img-top imageThumbnail" src="@(student.PhotoPath ==null ? "/images/sam.jpg": student.PhotoPath)" />
+                <div class="card-footer text-center">
+                    <a href="@($"student/details/{student.StudentId}")" class="btn btn-primary m-1">查看</a>
+
+                    <a href="@($"/student/add/{student.StudentId}")" class="btn btn-primary m-1">编辑</a>
+
+
+                    <span id="deleteSpan_@student.StudentId">
+                        <a href="/student" class="btn btn-danger"
+                           @onclick="@(()=>ConfirmDelete(student, true))">删除</a>
+                    </span>
+
+
+
+
+
+                </div>
+            </div>
+        }
+    </div>
+}
+
