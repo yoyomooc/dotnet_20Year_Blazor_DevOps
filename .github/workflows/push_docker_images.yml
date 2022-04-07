@@ -109,7 +109,7 @@ jobs:
 
       - name: run docker-compose
         run: |
-          docker-compose -f "docker-compose.yml" up -d 
+          docker-compose -f "docker-compose.yml" -p yoyomooc up -d 
           echo 部署Docker-compose完成 
 
 
