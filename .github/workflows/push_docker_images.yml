@@ -66,3 +66,13 @@ jobs:
           docker push $IMAGE_ID/${{env.IMAGE_NAME_APP}}:$VERSION
           docker push $IMAGE_ID/${{env.IMAGE_NAME_API}}:$VERSION
           echo 推送完成，准备开始清理。
+  
+  deploy:
+    runs-on: self-hosted
+    needs: build-and-push-image
+    steps:
+      - name: action-docker-compose
+        uses: sudo-bot/action-docker-compose@latest
+        with:
+              # https://docs.docker.com/compose/reference/overview/
+              cli-args: "up"
