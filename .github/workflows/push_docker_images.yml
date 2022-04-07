@@ -76,3 +76,7 @@ jobs:
         with:
               # https://docs.docker.com/compose/reference/overview/
               cli-args: "up"
+        run: echo IMAGE_ID=$IMAGE_ID
+            
+
+
