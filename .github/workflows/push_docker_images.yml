@@ -77,19 +77,7 @@ jobs:
           echo ${{ github.repository }}/$IMAGE_NAME_API
           echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
 
+            docker-compose --file docker-compose.yml pull
+            docker-compose --file docker-compose.yml run -d   
 
-      - name: pull
-        uses: sudo-bot/action-docker-compose@latest
-        with:
-              # https://docs.docker.com/compose/reference/overview/
-              cli-args: "pull"
-
-      - name: action-docker-compose
-        uses: sudo-bot/action-docker-compose@latest
-        with:
-              # https://docs.docker.com/compose/reference/overview/
-              cli-args: "up -d"
-       
-            
-
-
+        working-directory: ./
