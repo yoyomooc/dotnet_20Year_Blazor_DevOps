@@ -101,8 +101,8 @@ jobs:
           cp ./docker-compose.yml ./.github/workflows/docker-compose.yml
         working-directory: ./
 
-      - uses: sudo-bot/action-docker-compose@latest
       - name: action-docker-compose-up
+        uses: sudo-bot/action-docker-compose@latest
         with:
               # https://docs.docker.com/compose/reference/overview/
               cli-args: "up -d"
