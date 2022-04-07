@@ -89,4 +89,21 @@ jobs:
 
  
             
-       
+  deploy-quick:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: docker-compose-pull
+        run: |
+          echo ${{ github.repository }}/$IMAGE_NAME_API
+          echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
+          docker-compose  pull
+        working-directory: ./
+
+      - uses: actions/checkout@v2
+      - name: action-docker-compose
+        run: |     
+          docker-compose up -p yoyomooc -d
+        working-directory: ./
+
+        
