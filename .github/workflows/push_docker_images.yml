@@ -77,11 +77,18 @@ jobs:
           echo ${{ github.repository }}/$IMAGE_NAME_API
           echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
 
+
+      - name: pull
+        uses: sudo-bot/action-docker-compose@latest
+        with:
+              # https://docs.docker.com/compose/reference/overview/
+              cli-args: "pull"
+
       - name: action-docker-compose
         uses: sudo-bot/action-docker-compose@latest
         with:
               # https://docs.docker.com/compose/reference/overview/
-              cli-args: "up"
+              cli-args: "up -d"
        
             
 
