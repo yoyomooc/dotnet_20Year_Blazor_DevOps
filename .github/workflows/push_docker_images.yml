@@ -77,7 +77,7 @@ jobs:
           echo ${{ github.repository }}/$IMAGE_NAME_API
           echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
 
-            docker-compose --file docker-compose.yml pull
-            docker-compose --file docker-compose.yml up -d   
+          docker-compose --file docker-compose.yml pull
+          docker-compose --file docker-compose.yml up -p yoyomooc -d   
 
         working-directory: ./
