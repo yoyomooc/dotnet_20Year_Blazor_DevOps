@@ -71,12 +71,19 @@ jobs:
     runs-on: self-hosted
     needs: build-and-push-image
     steps:
+      - uses: actions/checkout@v2
+      - name: Checkout repository 仓库变量检查
+        run: |
+          echo ${{pwd}}
+          echo ${{ github.repository }}/$IMAGE_NAME_API
+          echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
+
       - name: action-docker-compose
         uses: sudo-bot/action-docker-compose@latest
         with:
               # https://docs.docker.com/compose/reference/overview/
               cli-args: "up"
-        run: echo IMAGE_ID=$IMAGE_ID
+       
             
 
 
