@@ -110,7 +110,7 @@ jobs:
       - name: run docker-compose
         run: |
           docker-compose -f "docker-compose.yml" up -d 
-          echo 拉取镜像完成 
+          echo 部署Docker-compose完成 
 
 
 
