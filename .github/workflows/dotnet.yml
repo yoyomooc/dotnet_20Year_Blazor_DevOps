@@ -1,4 +1,4 @@
-name: .NET
+name: .NET-Build
 
 on:
   push:
@@ -24,4 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: publish 发布到dist文件夹
-      run: dotnet publish --configuration Release --output dist
+      run: | 
+           dotnet publish --configuration Release --output dist
+           echo ls
+      

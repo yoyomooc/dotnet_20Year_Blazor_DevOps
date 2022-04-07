@@ -2,6 +2,9 @@
 <!-- ![.NET Core](https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps/workflows/.NET%20Core/badge.svg) 
 ![Docker Image CI](https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps/workflows/Docker%20Image%20CI/badge.svg) -->
 
+
+[![Docker Deploy](https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps/actions/workflows/push_docker_images.yml/badge.svg)](https://github.com/yoyomooc/dotnet_20Year_Blazor_DevOps/actions/workflows/push_docker_images.yml)
+
 # YoyoMooc.BlazorDemo 
 
 更多信息与课程欢迎访问： 
