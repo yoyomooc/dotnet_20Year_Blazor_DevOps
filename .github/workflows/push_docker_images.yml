@@ -76,13 +76,17 @@ jobs:
         run: |
           echo ${{ github.repository }}/$IMAGE_NAME_API
           echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
-
-          docker-compose --file docker-compose.yml pull
+          docker-compose  pull
         working-directory: ./
 
+
+
+      - uses: actions/checkout@v2
       - name: action-docker-compose
-        uses: sudo-bot/action-docker-compose@latest
-        with:
-              # https://docs.docker.com/compose/reference/overview/
-              cli-args: "up -d"
+        run: |     
+          docker-compose up -p yoyomooc -d
+        working-directory: ./
+
+ 
+            
        
