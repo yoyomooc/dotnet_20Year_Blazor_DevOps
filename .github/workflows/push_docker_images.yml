@@ -74,7 +74,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Checkout repository 仓库变量检查
         run: |
-          echo ${{pwd}}
           echo ${{ github.repository }}/$IMAGE_NAME_API
           echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
 
