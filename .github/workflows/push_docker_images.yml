@@ -95,6 +95,7 @@ jobs:
 
       - uses: actions/checkout@v2
       - name: CheckOut
+        run:  echo ${{ github.repository }}/$IMAGE_NAME_API
 
 
       - name: docker-compose-pull
