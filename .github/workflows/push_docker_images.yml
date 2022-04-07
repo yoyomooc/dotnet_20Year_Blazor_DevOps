@@ -100,10 +100,14 @@ jobs:
           docker-compose  pull
         working-directory: ./
 
-      - uses: actions/checkout@v2
       - name: action-docker-compose
-        run: |     
-          docker-compose up -p yoyomooc -d
-        working-directory: ./
+        uses: sudo-bot/action-docker-compose@latest
+        with:
+              # https://docs.docker.com/compose/reference/overview/
+              cli-args: "up -d"
+        run: |
+            cd ../../
 
         
+
+
