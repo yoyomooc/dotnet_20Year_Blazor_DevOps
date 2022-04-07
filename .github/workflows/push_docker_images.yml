@@ -92,20 +92,22 @@ jobs:
   deploy-quick:
     runs-on: self-hosted
     steps:
+
+      - name: CheckOut
       - uses: actions/checkout@v2
+
+
       - name: docker-compose-pull
         run: |
           echo ${{ github.repository }}/$IMAGE_NAME_API
           echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
           docker-compose  pull
-          cp ./docker-compose.yml ./.github/workflows/docker-compose.yml
-        working-directory: ./
+          echo 拉取镜像完成
+          docker-compose -p yoyomooc ps
+
 
       - name: run docker-compose
-        uses: sudo-bot/action-docker-compose@latest
-        with:
-              # https://docs.docker.com/compose/reference/overview/
-              cli-args: "up -d"
+        run: docker-compose -f "docker-compose.yml" up -d 
 
 
         
