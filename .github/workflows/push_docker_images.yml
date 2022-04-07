@@ -71,27 +71,6 @@ jobs:
     runs-on: self-hosted
     needs: build-and-push-image
     steps:
-      - uses: actions/checkout@v2
-      - name: Checkout repository 仓库变量检查
-        run: |
-          echo ${{ github.repository }}/$IMAGE_NAME_API
-          echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
-          docker-compose  pull
-        working-directory: ./
-
-
-
-      - uses: actions/checkout@v2
-      - name: action-docker-compose
-        run: |     
-          docker-compose up -p yoyomooc -d
-        working-directory: ./
-
- 
-            
-  deploy-quick:
-    runs-on: self-hosted
-    steps:
 
       - uses: actions/checkout@v2
       - name: CheckOut
@@ -112,8 +91,4 @@ jobs:
           docker-compose -f "docker-compose.yml" -p yoyomooc up -d 
           echo 部署Docker-compose完成 
 
-
-
-        
-
-
+ 
