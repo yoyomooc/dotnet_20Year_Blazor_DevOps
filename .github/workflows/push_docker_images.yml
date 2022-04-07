@@ -78,6 +78,6 @@ jobs:
           echo ${{ secrets.PUSH_GITLAB_TO_GITHUB }}
 
             docker-compose --file docker-compose.yml pull
-            docker-compose --file docker-compose.yml run -d   
+            docker-compose --file docker-compose.yml up -d   
 
         working-directory: ./
